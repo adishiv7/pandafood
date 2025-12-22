@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panda Food Junction - Official Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-text">🐼 PANDA FOOD JUNCTION</div>
+        </div>
+        <button class="contact-btn" onclick="makeCall()">📞 Call: +91-9693146705</button>
+    </header>
+
+    <section class="hero">
+        <h1>Heavy Bites for Hungry Pandas</h1>
+        <p>Momo • Rolls • Chowmein • Rice • Starters</p>
+        <div class="delivery-info">🕒 Open: 3:30 PM – 10:00 PM</div>
+    </section>
+
+    <section class="menu-section">
+        <div class="menu-grid">
+            
+            <div class="menu-card">
+                <h3>🥟 MOMOS</h3>
+                <div class="menu-item" data-name="Veg Momo (Steam)" data-price-h="30" data-price-f="60"></div>
+                <div class="menu-item" data-name="Veg Momo (Fry)" data-price-h="35" data-price-f="70"></div>
+                <div class="menu-item" data-name="Veg Momo (Crispy)" data-price-h="45" data-price-f="90"></div>
+                <div class="menu-item" data-name="Chicken Momo (Steam)" data-price-h="40" data-price-f="80"></div>
+                <div class="menu-item" data-name="Chicken Momo (Fry)" data-price-h="45" data-price-f="90"></div>
+                <div class="menu-item" data-name="Chicken Momo (Crispy)" data-price-h="65" data-price-f="120"></div>
+                <div class="menu-item" data-name="Chicken Chilli Momo" data-price-h="75" data-price-f="140"></div>
+                <div class="menu-item" data-name="Paneer Momo (Steam)" data-price-h="40" data-price-f="80"></div>
+                <div class="menu-item" data-name="Paneer Momo (Fry)" data-price-h="45" data-price-f="90"></div>
+                <div class="menu-item" data-name="Paneer Momo (Crispy)" data-price-h="65" data-price-f="130"></div>
+                <div class="menu-item" data-name="Paneer Chilli Momo" data-price-h="75" data-price-f="140"></div>
+            </div>
+
+            <div class="menu-card">
+                <h3>🌯 ROLLS</h3>
+                <div class="menu-item single" data-name="Single Egg Roll" data-price="45"></div>
+                <div class="menu-item single" data-name="Double Egg Roll" data-price="50"></div>
+                <div class="menu-item single" data-name="Veg Roll" data-price="40"></div>
+                <div class="menu-item single" data-name="Paneer Roll" data-price="60"></div>
+                <div class="menu-item single" data-name="Egg Chicken Roll (1 Egg)" data-price="80"></div>
+                <div class="menu-item single" data-name="Egg Chicken Roll (2 Eggs)" data-price="90"></div>
+                <div class="menu-item single" data-name="Chicken Roll (No Egg)" data-price="70"></div>
+            </div>
+
+            <div class="menu-card">
+                <h3>🍜 CHOWMEIN</h3>
+                <div class="menu-item" data-name="Veg Chowmein" data-price-h="50" data-price-f="80"></div>
+                <div class="menu-item" data-name="Paneer Chowmein" data-price-h="70" data-price-f="120"></div>
+                <div class="menu-item" data-name="Egg Chowmein" data-price-h="60" data-price-f="100"></div>
+                <div class="menu-item" data-name="Chicken Chowmein" data-price-h="70" data-price-f="130"></div>
+                <div class="menu-item" data-name="Mix Chowmein" data-price-h="80" data-price-f="150"></div>
+            </div>
+
+            <div class="menu-card">
+                <h3>🍚 RICE</h3>
+                <div class="menu-item" data-name="Veg Fried Rice" data-price-h="50" data-price-f="80"></div>
+                <div class="menu-item" data-name="Egg Fried Rice" data-price-h="60" data-price-f="100"></div>
+                <div class="menu-item" data-name="Chicken Fried Rice" data-price-h="70" data-price-f="130"></div>
+                <div class="menu-item" data-name="Paneer Fried Rice" data-price-h="70" data-price-f="120"></div>
+                <div class="menu-item" data-name="Mix Fried Rice" data-price-h="80" data-price-f="150"></div>
+            </div>
+
+            <div class="menu-card">
+                <h3>🌟 STARTERS & MORE</h3>
+                <div class="menu-item" data-name="Veg Manchurian" data-price-h="60" data-price-f="100"></div>
+                <div class="menu-item" data-name="Chicken Lollipop" data-price-h="140" data-price-f="240"></div>
+                <div class="menu-item" data-name="Paneer Chilli" data-price-h="80" data-price-f="160"></div>
+                <div class="menu-item" data-name="Baby Corn Chilli" data-price-h="80" data-price-f="150"></div>
+                <div class="menu-item single" data-name="Crispy Baby Corn Chilli" data-price="150"></div>
+                <div class="menu-item" data-name="Chicken Chilli (With Bone)" data-price-h="60" data-price-f="130"></div>
+                <div class="menu-item" data-name="Chicken Chilli (Boneless)" data-price-h="85" data-price-f="160"></div>
+                <div class="menu-item single" data-name="Lachha Paratha" data-price="20"></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-float" id="cartFloat">
+        <div class="cart-header">
+            <span class="cart-title">🛒 Your Order</span>
+            <span class="cart-count" id="cartCount">0 items</span>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotal">₹0</span>
+        </div>
+        <button class="checkout-btn" onclick="checkout()">Confirm Order via WhatsApp</button>
+    </div>
+
+    <footer class="footer">
+        <p>📍 Opposite R.K. Puram Mor</p>
+        <p>© 2025 Panda Food Junction</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

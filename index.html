@@ -625,7 +625,7 @@
             }
             
             const items = Object.values(cart);
-            let msg = "*New Order from App* 🐼\n\n";
+            let msg = "*Hey I Would Like to Order These Items:* 🐼\n\n";
             items.forEach(i => {
                 msg += `${i.quantity} x ${i.displayName} = ₹${i.price * i.quantity}\n`;
             });
@@ -638,3 +638,4 @@
     </script>
 </body>
 </html>
+
